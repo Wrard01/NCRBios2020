@@ -1,8 +1,7 @@
-# NCRBios2020
 #######   NCR BIOS CREATOR BY Mel    ######
 
 
-This program offers a simple way to generate USB Bios sticks for different models of the NCR POS Systems.
+This program offers a simple way to generate USB Bios sticks for different models of the NCR POS Systems. 
 
 
 
@@ -12,14 +11,14 @@ a tool for internal use and for people with knowledge of the NCR Products and ve
 
 
 
-To create a USB Drive bios first connect the USB drive you want to use as the USB bootable Bios and unplug all
-the other USB drives to avoid any accidental data deletion, if more than one USB drive is connected the program
+To create a USB Drive bios first connect the USB drive you want to use as the USB bootable Bios and unplug all 
+the other USB drives to avoid any accidental data deletion, if more than one USB drive is connected the program 
 will detect all the removable devices, make sure you have selected the right one from the list. once the USB drive
  is selected pick the target model, to display all the available models click on the arrow pointing down and click
- on the Set Bios Button, a message will show which USB drive has been overwritten and what terminal the bios is for.
+ on the Set Bios Button, a message will show which USB drive has been overwritten and what terminal the bios is for. 
 
 
-If more than one USB needs to be create connect a different USB Drive a click om refresh Button, if no USB is
+If more than one USB needs to be create connect a different USB Drive a click om refresh Button, if no USB is 
 connected before running the program and error message will show click ok and connect the USB you want to use and click on Refresh.
 
 
@@ -34,7 +33,7 @@ updating and adding new models
 
 
 
-To update a firmware file fist get the file directly from the NCR website, extract it to a folder with the general
+To update a firmware file fist get the file directly from the NCR website, extract it to a folder with the general 
 model (7702 or such), copy that folder, and rename the existing file as modelOld (7702old) and paste the folder extracted.
 
 To add new models get the file directly from the NCR website, extract it to a folder with the general model (7702 or such)
@@ -47,4 +46,4 @@ to remove models delete the folder and the name of the folder from the Models.tx
 
 
 this program has been created to improve production in a fast track work environment where every minute counts
-to achieve goals and customer satisfaction.
+to achieve goals and customer satisfaction. 
