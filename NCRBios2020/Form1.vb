@@ -16,19 +16,16 @@ Public Class Form1
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles create_bios.Click
 
-        Try
-            If usbd >= 1 Then
+
+        If usbd >= 1 Then
 
                 MakeUsb()
 
             Else
-                MsgBox("No Usb drive detected", vbOK, "Insert Blank USB Drive")
+            MsgBox("Insert Blank USB Drive", MsgBoxStyle.OkOnly, "No Usb drive detected")
 
-            End If
+        End If
 
-        Catch ex As Exception
-            MsgBox("Unexpected Error no usb conected, or write protected drive, select model / drive and try again", vbOK)
-        End Try
 
     End Sub
     Sub MakeUsb()
