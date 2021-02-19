@@ -14,7 +14,7 @@ Public Class Form1
 
 
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles create_bios.Click
 
         Try
             If usbd >= 1 Then
@@ -61,42 +61,39 @@ Public Class Form1
 
         Dim allDrives = DriveInfo.GetDrives
         LBDrive.Items.Clear()
-        usbd = 0
-
-        For Each tp In allDrives
 
 
-            If tp.DriveType = 2 Then
-                usbd = usbd + 1
-
-                LBDrive.Items.Add(tp.Name)
-
-            End If
-        Next
+        Try
+            For Each tp In allDrives
 
 
-        If usbd >= 1 Then
+                If tp.DriveType = 2 Then
+                    usbd = usbd + 1
+
+                    LBDrive.Items.Add(tp.Name)
+
+                End If
+            Next
             LBDrive.SelectedIndex = 0
+        Catch ex As Exception
+            MsgBox("No Usb drive detected", vbOK, "Connect a USB Drive")
+        End Try
 
-        Else
-            MsgBox("No Usb drive detected", vbOK, "Insert Blank USB Drive")
-
-        End If
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles closep.Click
         Me.Close()
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles refresh.Click
         Label1.Text = "......."
         'Label5.Text = "......."
         LBDrive.Items.Clear()
         Detect()
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles delete_files.Click
 
         DeleteFiles()
     End Sub
