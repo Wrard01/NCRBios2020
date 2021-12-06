@@ -37,7 +37,7 @@ updating and adding new models
 To update a firmware file fist get the file directly from the NCR website, extract it to a folder with the general
 model (7702 or such), copy that folder, and rename the existing file as modelOld (7702old) and paste the folder extracted.
 
-To add new models get the file directly from the NCR website, extract it to a folder with the general model (7702 or such)
+To add new models get the file directly from the NCR website, extract it to a folder with the general model (7702 )
  copy that folder and paste into the folder than contain this file then open the models. txt file and in a new line add the name of the folder just added and save the file.
 
 
