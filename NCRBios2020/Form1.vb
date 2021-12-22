@@ -8,6 +8,7 @@ Public Class Form1
     Public usbd As Integer
 
 
+
     Sub Detect()
 
         Dim allDrives = DriveInfo.GetDrives
@@ -29,7 +30,7 @@ Public Class Form1
         Catch ex As Exception
             MsgBox("Inser a USB Drive", vbOK, "Missing USB Drive")
             wait(3000)
-            Detect()
+            'Detect()
         End Try
 
 
@@ -37,10 +38,11 @@ Public Class Form1
 
     Sub GetModel()
 
+        
 
         Try
             Const Path As String = "models.txt"
-            If FileLen(Path) Then
+            If File.Exists(Path) Then
                 Dim lector = New StreamReader(Path)
                 CBModel.Items.Clear()
                 Do Until lector.EndOfStream = True
@@ -114,6 +116,7 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         GetModel()
         Detect()
 
@@ -125,7 +128,7 @@ Public Class Form1
 
         If usbd >= 1 Then
             Try
-                Process.Start(LBDrive.SelectedItem.ToString().Trim("\"))
+
                 wait(1000)
                 MakeUsb()
 
@@ -145,7 +148,8 @@ Public Class Form1
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles closep.Click, MyBase.Leave
         Me.Close()
-        Shell("taskkill /f /im explorer.exe")
+
+
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles refreshbtn.Click
@@ -162,9 +166,10 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
-
         Process.Start(LBDrive.SelectedItem.ToString().Trim("\"))
+
     End Sub
+
 
 
 End Class
